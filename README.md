@@ -29,6 +29,7 @@ This project is the front-end track of Signafire's take home assignment. The fra
 ## Some Assumptions I made
 
 * Trashing a message will not unstar it;
+* Trashed messages can be restored in the "Trashed Message View" by clicking the untrash button next to the star button.
 * Only the starred messages that are shown on the current view will be counted. That is to say, in the "Untrashed Message View", even though there exists some starred trashed messages, the length of starred messages will only take the untrashed messages into account. 
 * Searching keywords can be triggered by either clicking the submit button or press the `Enter` key.
 * You can exit searching by clicking the cancel button next to the submit button. This will clear the input and the highlights.

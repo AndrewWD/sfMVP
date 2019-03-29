@@ -51,6 +51,7 @@
 .buttonGroup > button {
   margin-right: 10px;
   height: 30px;
+  width: 100px;
   background-color: white;
   border: 1px solid rgba(0,0,0,.15);
   cursor: pointer;
@@ -66,7 +67,6 @@
 }
 
 .buttonGroup > .isStarred {
-  width: 91px;
   background-color: #c09513;
   color: white;
 }
@@ -117,6 +117,6 @@
   }
 
   .buttonGroup > .trashButton {
-    width: 91px;
+    width: 100px;
   }
 }
