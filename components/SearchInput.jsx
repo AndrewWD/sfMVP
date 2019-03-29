@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import styles from '../assets/styles/SearchInput.module.css'
 
 class SearchInput extends Component {
@@ -14,9 +14,10 @@ class SearchInput extends Component {
 
   handleSearch = e => {
     const { keyword } = this.state
+    // Search keyword is the submit button is clicked or press the enter
     if (e.type === 'click' 
       || e.type === 'keypress' && e.key === 'Enter') {
-        this.props.onSearchKeyword(keyword)
+      this.props.onSearchKeyword(keyword)
     }   
   } 
 

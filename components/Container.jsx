@@ -42,6 +42,7 @@ class Container extends Component {
   handleSearchKeyword = keyword => {
     const { messages } = this.state
     this.clearSearchResult(messages)
+    // Won't trigger search if the input is empty or just spaces
     if (keyword.trim().length === 0) {
       this.setState({
         messages,
@@ -59,7 +60,8 @@ class Container extends Component {
   } 
 
   clearSearchResult = messages => {
-    const hlRegex = new RegExp('<span class="highlight">(.*?)</span>', 'gi') 
+    const hlRegex = new RegExp('<span class="highlight">(.*?)</span>', 'gi')
+    // Get rid of all span tag in contents
     messages.forEach(message => {
       message.content = message.content.replace(hlRegex, (match, keyword) => keyword)
     })
