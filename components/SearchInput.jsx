@@ -12,9 +12,12 @@ class SearchInput extends Component {
     })
   }
 
-  handleClickSearchBtn = () => {
+  handleSearch = e => {
     const { keyword } = this.state
-    this.props.onSearchKeyword(keyword)
+    if (e.type === 'click' 
+      || e.type === 'keypress' && e.key === 'Enter') {
+        this.props.onSearchKeyword(keyword)
+    }   
   } 
 
   handleCancelSearchBtn = () => {
@@ -31,9 +34,10 @@ class SearchInput extends Component {
           className={styles.inputBox}
           value={this.state.keyword}
           onChange={this.handleInputChange}
+          onKeyPress={this.handleSearch}
         />
         <button
-          onClick={this.handleClickSearchBtn}
+          onClick={this.handleSearch}
         >
           Submit
         </button>

@@ -50,7 +50,7 @@ class Container extends Component {
     }
     const keywordRegex = new RegExp(`${keyword}`, 'gi') 
     const searchedMsgs = messages.map(message => {
-      message.content = message.content.replace(keywordRegex, `<span id="highlight">${keyword}</span>`)
+      message.content = message.content.replace(keywordRegex, `<span class="highlight">${keyword}</span>`)
       return message
     })
     this.setState({
@@ -59,7 +59,7 @@ class Container extends Component {
   } 
 
   clearSearchResult = messages => {
-    const hlRegex = new RegExp('<span id="highlight">(.*?)</span>', 'gi') 
+    const hlRegex = new RegExp('<span class="highlight">(.*?)</span>', 'gi') 
     messages.forEach(message => {
       message.content = message.content.replace(hlRegex, (match, keyword) => keyword)
     })
