@@ -1,0 +1,122 @@
+.messageContainer {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0,0,0,.25);
+  padding: 10px;
+}
+
+.userInfo {
+  width: 130px;
+  flex: 0 0 auto;
+}
+
+.userInfo > p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.imgContainer {
+  width: 128px;
+  height: 128px;
+}
+
+.imgContainer > img {
+  width: 100%;
+  height: 100%;
+}
+
+.contentContainer {
+  margin: 0 10px;
+  flex: 1;
+}
+
+.contentContainer > span {
+  color: rgba(0,0,0,.7)
+}
+
+.contentContainer > span:first-child::after {
+  content: "|";
+  margin: 0 5px;
+}
+
+.content {
+  padding: 10px 0;
+}
+
+.buttonGroup {
+  width: 150px;
+  flex: 0 0 auto;
+}
+
+.buttonGroup > button {
+  margin-right: 10px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.15);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.buttonGroup > button:hover {
+  background-color: rgba(0,0,0,.05);
+}
+
+.buttonGroup > button:focus {
+  outline: none;
+}
+
+.buttonGroup > .isStarred {
+  width: 91px;
+  background-color: #c09513;
+  color: white;
+}
+
+.buttonGroup > .isStarred:hover {
+  background-color: rgba(192,149,19,.85);
+}
+
+.buttonGroup > .trashButton {
+  width: 30px;
+  background-color: #ff4007;
+  color: white;
+}
+
+.buttonGroup > .trashButton:hover {
+  background-color: rgba(255,64,7,.85);
+  color: white;
+}
+
+@media only screen and (max-width: 415px) and (orientation: portrait) {
+  .messageContainer {
+    flex-direction: column;
+  }
+
+  .userInfo {
+    margin: 10px;
+    padding-bottom: 5px;
+    width: calc(100% - 20px);
+    border-bottom: 1px solid rgba(0,0,0,.15);
+  }
+
+  .userInfo > p {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .imgContainer {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+
+  .buttonGroup {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .buttonGroup > .trashButton {
+    width: 91px;
+  }
+}

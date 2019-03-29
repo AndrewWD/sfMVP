@@ -1,0 +1,42 @@
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  min-width: 768px;
+}
+
+.toggleButton {
+  margin: 0 10px 20px 0;
+  height: 30px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.15);
+  transition: background-color, 0,2s;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  background-color: rgba(0,0,0,.05);
+}
+
+.toggleButton:focus {
+  outline: none;
+}
+
+.searchInput {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 415px) and (orientation: portrait) {
+  .container {
+    min-width: 300px;
+  }
+
+  .toggleButton {
+    margin-bottom: 10px;
+  }
+
+  .searchInput {
+    display: block;
+    margin-bottom: 20px;
+  }
+}

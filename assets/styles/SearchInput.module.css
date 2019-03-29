@@ -1,0 +1,27 @@
+.inputBox {
+  margin-right: 10px;
+  box-sizing: border-box;
+  height: 30px;
+  border: 1px solid rgba(0,0,0,.15);
+}
+
+.inputBox:focus {
+  outline: none;
+}
+
+.inputBox ~ button {
+  margin-right: 10px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.15);
+  transition: background-color, 0.2s;
+  cursor: pointer;
+}
+
+.inputBox ~ button:hover {
+  background-color: rgba(0,0,0,.05);
+}
+
+.inputBox ~ button:focus {
+  outline: none;
+}

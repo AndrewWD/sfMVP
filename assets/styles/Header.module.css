@@ -1,0 +1,23 @@
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 768px;
+  padding: 8px 10px;
+  background-color: #efefef;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.header > h1 {
+  float: right;
+  margin: 0;
+  line-height: 35px;
+  font-size: 1rem;
+  font-weight: normal;
+  color: gray;
+}
+
+@media only screen and (max-width: 415px) and (orientation: portrait) {
+  .header {
+    min-width: 300px;
+  }
+}
